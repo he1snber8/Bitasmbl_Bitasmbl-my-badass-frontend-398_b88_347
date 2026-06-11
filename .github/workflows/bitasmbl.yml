@@ -53,7 +53,7 @@ jobs:
           -w "\n%{http_code}" \
           -X POST https://bd22-176-221-143-53.ngrok-free.app/users/check-token-validity \
           -H "Content-Type: application/json" \
-          -H "Authorization: Bearer ${ secrets.BITASMBL_TOKEN }")
+          -H "Authorization: Bearer ${{ secrets.BITASMBL_TOKEN }}")
 
           BODY=$(echo "$RESPONSE" | sed '$d')
           STATUS=$(echo "$RESPONSE" | tail -n1)
